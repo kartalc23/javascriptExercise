@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #222;
+    font-family: 'Open sans', sans-serif;
+    background-image: url('https://source.unsplash.com/1600x900/?landspace');
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    padding: 2em;
+    width: 100%;
+    max-width: 420px;
+    align-items: center;
+    background: #000000d0;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 1em; 
+    color: #fff;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search .search-bar {
+    padding: 10px 20px;
+    border-radius: 24px;
+    margin-right: 0.5em;
+    background: #7c7c7c2b;
+    font-family: inherit;
+    color: #fff;
+    font-size: 105%;
+    width: calc(100% - 100px);
+}
+
+.search button {
+    margin: 0.5em;
+    border-radius: 50%;
+    height: 46px;
+    width: 46px;
+    color: #fff;
+    font-size: 18px;
+    background: #7c7c7c2b;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background: #7c7c7c6b;
+    transition: 300ms all;
+}
+
+.search button svg {
+    margin-bottom: -3px;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Yükleniyor...";
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}

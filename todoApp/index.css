@@ -1,0 +1,150 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+   outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+   width: 5px;
+   display: block;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #24273d;
+   border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #171723;
+   border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: #3b3f64;
+}
+
+html,
+body {
+   width: 100%;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   padding: 25px 0;
+   background: #171723;
+   font-family: "Rubik", sans-serif;
+}
+
+.app {
+   width: 700px;
+}
+
+.app h1 {
+   font-weight: 700;
+   color: #fff;
+   margin-bottom: 20px;
+}
+
+.app form {
+   background: #24273d;
+   padding: 10px 30px;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.app form input {
+   width: calc(100% - 50px);
+   padding: 20px 20px;
+   border-radius: 10px;
+   background: transparent;
+   border: none;
+   outline: none;
+   color: #fff;
+   font-size: 18px;
+   font-family: inherit;
+}
+
+.app form input::placeholder {
+   color: #3b3f64;
+   font-family: inherit;
+}
+
+.app form button {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 10px;
+   background: transparent;
+   border: none;
+   border: 1px solid #ddd;
+}
+
+.app form button i {
+   font-size: 16px;
+   color: #ddd;
+}
+
+.app .todoList {
+   width: 100%;
+   margin: 20px 0;
+   max-height: 400px;
+   overflow-y: auto;
+   border-radius: 10px;
+}
+
+.app .todoList li {
+   padding: 15px 25px;
+   background: #24273d;
+   color: #fff;
+   border-bottom: 1px solid #3b3f64;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   user-select: none;
+   justify-content: space-between;
+}
+
+.app .todoList li.completed {
+   text-decoration: line-through;
+   color: #3b3f64
+}
+
+.app .todoList li.completed .left .circle {
+   background-color: #171723;
+   border: 1px solid #171723;
+}
+
+.app .todoList li .left {
+   display: flex;
+   align-items: center;
+}
+
+.app .todoList li .right i {
+   color: #fff;
+   font-size: 18px;
+   padding: 10px 0 10px 20px;
+}
+
+.app .todoList li div.circle {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   border: 1px solid #ddd;
+   margin-right: 20px;
+}
+
+.app .info {
+   color: #fff;
+   margin-top: 20px;
+}

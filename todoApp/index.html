@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Todo App</title>
+
+      <link rel="stylesheet" href="index.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <div class="app">
+         <h1>TODO APP</h1>
+         <form id="form">
+            <button type="submit" id="addBtn">
+               <i class="fa-solid fa-plus"></i>
+            </button>
+            <input type="text" id="todoInput" placeholder="Create a new todo..." autocomplete="off" />
+         </form>
+
+         <ul class="todoList" id="todoList">
+         </ul>
+         <div class="info">
+            <p>Please click for mark complete</p>
+         </div>
+      </div>
+
+      <script src="index.js"></script>
+   </body>
+</html>
