@@ -1,5 +1,4 @@
 const form = document.getElementById("form");
-const delBtn = document.querySelector("delBtn");
 const todoList = document.getElementById("todoList");
 const todoInput = document.getElementById("todoInput");
 
@@ -11,10 +10,15 @@ if (todos) {
    });
 }
 
-function deleteTodo() {
-   let li = document.querySelector("li");
-   todoList.removeChild(li);
-   updateLS();
+function delTodo() {
+   const todosEl = document.querySelectorAll(".li");
+
+   todosEl.forEach((todo) => {
+      todo.addEventListener("click", () => {
+         todoList.removeChild(todo);
+         updateLS();
+      });
+   });
 }
 
 function addTodo(todo) {
@@ -24,24 +28,19 @@ function addTodo(todo) {
       newTodoText = todo.text;
    }
 
-   if (todoInput === "") {
-      alert("Please enter a todo");
-      return;
-   }
-
    if (newTodoText) {
       const li = document.createElement("li");
       li.classList.add("li");
       li.innerHTML = `
      <div class="left">
           <div class="circle"></div>
-              <p id="todoItem">Todo list item</p>
+              <p class="todoItem">Todo list item</p>
           </div>
       <div class="right">
-         <i class="fa fa-trash" aria-hidden="true" id="delBtn" onclick="deleteTodo()"></i>
+         <i class="fa fa-trash" aria-hidden="true" class="delBtn" onclick="delTodo()"></i>
       </div>`;
 
-      let todoItem = li.querySelector("#todoItem");
+      let todoItem = li.querySelector(".todoItem");
       todoItem.innerHTML = newTodoText;
       todoList.appendChild(li);
 
@@ -55,13 +54,15 @@ function addTodo(todo) {
       if (todo && todo.completed) {
          li.classList.add("completed");
          updateLS();
-
       }
    }
+
+   updateLS();
 }
 
 function updateLS() {
    const todosEl = document.querySelectorAll(".li");
+   const todosPriEl = document.querySelector(".li");
 
    const todos = [];
 
