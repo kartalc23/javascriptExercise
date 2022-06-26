@@ -30,6 +30,10 @@ body.dark {
     position: absolute;
 }
 
+.mode-label span {
+    user-select: none;
+}
+
 .mode-label span:nth-of-type(2) {
     display: none;
 }
