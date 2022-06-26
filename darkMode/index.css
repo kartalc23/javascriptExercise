@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #222;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: 300ms all;
+}
+
+body.dark {
+    background: #222;
+    color: #fff;
+}
+
+.mode-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mode-label input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.mode-label span:nth-of-type(2) {
+    display: none;
+}
+
+.mode-label input:checked + span {
+    display: none;
+}
+
+.mode-label input:checked + span + span {
+    display: inline-block;
+}
